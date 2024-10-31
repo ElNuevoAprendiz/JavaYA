@@ -5,8 +5,11 @@
  */
 
 
-import javax.swing.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
 
 
 public class Formulario2 extends JFrame implements ActionListener{
@@ -18,7 +21,19 @@ public class Formulario2 extends JFrame implements ActionListener{
         boton.setBounds(300,250,100,30);
         add(boton);
         boton.addActionListener(this);
-            
-        );
+    }
+
+    public void actionPerformed(ActionEvent e){
+        if (e.getSource()==boton){
+            System.exit(0);
+        }
+    }
+
+    public static void main(String[] args) {
+        Formulario2 formulario2 = new Formulario2();
+        formulario2.setBounds(0,0,450,300);
+        formulario2.setVisible(true);
+        formulario2.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        
     }
 }
