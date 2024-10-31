@@ -12,9 +12,9 @@ public class FormularioConJTextField extends JFrame implements ActionListener{
         boton = new JButton("Aceptar");
         boton.setBounds(10,80,100,30);
         add(boton);
-        boton.addActionListener;
+        boton.addActionListener(this);
 
-        etiqueta = JLabel("Usuario");
+        etiqueta = new JLabel("Usuario");
         etiqueta.setBounds(10,10,100,30);
         add(etiqueta);
 
@@ -25,7 +25,7 @@ public class FormularioConJTextField extends JFrame implements ActionListener{
     }
 
     public void actionPerformed(ActionEvent e){
-        if (e.getSource==boton){
+        if (e.getSource()==boton){
             setTitle(texto.getText());
         }
     }
